@@ -153,7 +153,7 @@ int main(){
 					anoC--;
 
 			}while(anoC>=ano);
-			printf("%i",(diaSemanaC + 1));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
+			printf("%i",(diaSemanaC + 1));
 		}
 
 		//CONDICAO DE ANO DESEJADO MAIOR QUE ANO REFERENCIA
