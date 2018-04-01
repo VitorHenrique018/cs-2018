@@ -1,14 +1,21 @@
 #include<stdio.h>
 #include <stdlib.h>
+
 int main(){
 
-     int data;
+     // Variáveis
+     int data; // data q quero descobrir
      int dia = 0;
      int mes = 0;
      int ano = 0;
+     int dataReferencia, diaR, mesR,anoR; // data de referencia
+     int diaSemana,diaSemanaC ; //dia da semana 0 a 6
+     int diaC,mesC,anoC;      // variaveis de auxilio.
+     int mesFim = 1;          //meses e dias finais;
+     int diaFim = 1;
+     int i,j;
      int bissexto;
-     int dataReferencia, diaR, mesR,anoR;
-     int diaSemana;
+
 
 
     printf("Digite a data: ");
@@ -25,6 +32,7 @@ int main(){
     printf("mes  = %d \n",mes);
 
     printf("dia = %d \n",dia);
+
 
     if(ano < 1000 || mes>12 || dia>31){
         printf("-1");
@@ -53,6 +61,8 @@ int main(){
         exit(-1);
     }
 
+    //Todas as condicoes da primeira data foram Feitas.
+
     printf("Digite a data de Referencia: ");
     scanf("%d",&dataReferencia);
 
@@ -80,13 +90,137 @@ int main(){
         printf("-1");
         exit(-1);
     }
+
     printf("Informe o dia da Semana da Data de Referencia: ");
     scanf("%d",&diaSemana);
 
-    if(diaSemana<0 || diaSemana > 6){
+   /* if(diaSemana<0 || diaSemana > 6){
         printf("-1");
         exit(0);
     }
+*/
+    diaC = diaR;
+    mesC = mesR;
+    anoC = anoR;
+    diaSemanaC = diaSemana;
+
+
+            // CONDICAO DE ANO REFERENCIA MAIOR QUE ANO DESEJADO.
+    		if(anoR >= ano) {
+			do {
+
+				if(anoC == ano) {
+					mesFim = mes;
+
+				}
+
+					for (i = mesC; i >= mesFim; i--) {
+
+
+						if(anoC == ano && mesC == mesFim) {
+							diaFim = dia;
+						}
+
+						for (j = diaC; j >= diaFim; j--) {
+
+							diaC--;
+
+							if(diaSemanaC >= 1) {
+								diaSemanaC--;
+							}else {
+								diaSemanaC = 6;
+							}
+
+						}
+
+
+						mesC--;
+
+						if(mesC == 4 || mesC == 6 || mesC == 9 || mesC == 11) {
+							diaC = 30;
+
+						}else if(mesC == 2) {
+
+								diaC = 28;
+
+							}
+						else {
+							diaC = 31;
+						}
+
+					}
+					mesC=12;
+					anoC--;
+
+			}while(anoC>=ano);
+			printf("%i",(diaSemanaC + 1));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
+		}
+
+		//CONDICAO DE ANO DESEJADO MAIOR QUE ANO REFERENCIA
+      if(ano > anoR){
+           do{
+            if(anoC == ano) {
+					mesFim = mes;
+
+				}
+
+					for (i = mesC; i <= mesFim; i++) {
+
+
+						if(anoC == ano && mesC == mesFim) {
+							diaFim = dia;
+						}
+
+						for (j = diaC; j <= diaFim; j++) {
+
+
+							diaC++;
+
+							if(diaSemanaC >= 1) {
+								diaSemanaC++;
+							}else {
+								diaSemanaC = 6;
+							}
+
+						}
+
+
+						mesC++;
+
+						if(mesC == 4 || mesC == 6 || mesC == 9 || mesC == 11) {
+							diaC = 30;
+
+						}else if(mesC == 2) {
+
+								diaC = 28;
+
+							}
+						else {
+							diaC = 31;
+						}
+
+					}
+					mesC=12;
+					anoC++;
+
+			}while(anoC<=ano);
+
+			printf("%i",(diaSemanaC - 1));
+
+
+
+
+
+
+ }
+
+
+
 
     return 0;
-}
+
+
+
+
+
+  }
