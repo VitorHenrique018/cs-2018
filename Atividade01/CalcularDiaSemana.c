@@ -15,8 +15,8 @@ int main(){
      int diaFim = 1;
      int i,j;
      int bissexto;
-
-
+	
+//inserção de dados
 
     printf("Digite a data: ");
     scanf("%d",&data);
@@ -116,44 +116,42 @@ int main(){
 
 					for (i = mesC; i >= mesFim; i--) {
 
-
-						if(anoC == ano && mesC == mesFim) {
+					if(anoC == ano && mesC == mesFim) {
 							diaFim = dia;
 						}
 
-						for (j = diaC; j >= diaFim; j--) {
+					for (j = diaC; j >= diaFim; j--) {
 
-							diaC--;
+						diaC--;
 
-							if(diaSemanaC >= 1) {
-								diaSemanaC--;
-							}else {
-								diaSemanaC = 6;
+					if(diaSemanaC >= 1) {
+						diaSemanaC--;
+					}else {
+						diaSemanaC = 6;
 							}
 
 						}
 
-
 						mesC--;
 
-						if(mesC == 4 || mesC == 6 || mesC == 9 || mesC == 11) {
-							diaC = 30;
+					if(mesC == 1 || mesC == 3 || mesC == 5 || mesC == 7 || mesC == 8  || mesC == 10 || mesC == 12) {
+							diaC = 31;
 
-						}else if(mesC == 2) {
+					}else if(mesC == 2) {
 
-								diaC = 28;
+						diaC = 28;
 
 							}
-						else {
-							diaC = 31;
+					else {
+							diaC = 30;
 						}
 
 					}
 					mesC=12;
 					anoC--;
 
-			}while(anoC>=ano);
-			printf("%i",(diaSemanaC + 1));
+		}while(anoC>=ano);
+		printf("%i",(diaSemanaC + 1));
 		}
 
 		//CONDICAO DE ANO DESEJADO MAIOR QUE ANO REFERENCIA
@@ -182,8 +180,7 @@ int main(){
 								diaSemanaC = 6;
 							}
 
-						}
-
+					}
 
 						mesC++;
 
@@ -207,20 +204,6 @@ int main(){
 
 			printf("%i",(diaSemanaC - 1));
 
-
-
-
-
-
  }
-
-
-
-
     return 0;
-
-
-
-
-
   }
