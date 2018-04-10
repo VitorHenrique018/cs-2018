@@ -1,6 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
+#include <stdbool.h>
 
+bool bissex (int ano, int r){
+
+        if (ano - r % 4 == 0 && (ano % 400 == 0 || ano % 100 != 0)) {
+        return true;
+  }
+        else {
+        return false;
+    }
+}
 int main(){
 
      // Variáveis
@@ -15,7 +26,7 @@ int main(){
      int diaFim = 1;
      int i,j;
      int bissexto;
-	
+
 //inserção de dados
 
     printf("Digite a data: ");
@@ -135,10 +146,16 @@ int main(){
 						mesC--;
 
 					if(mesC == 1 || mesC == 3 || mesC == 5 || mesC == 7 || mesC == 8  || mesC == 10 || mesC == 12) {
+
 							diaC = 31;
 
-					}else if(mesC == 2) {
+					}
+					else if(mesC == 2) {
 
+						if (bissex(ano,bissexto)){
+                            diaC = 29;
+						}
+						 else
 						diaC = 28;
 
 							}
