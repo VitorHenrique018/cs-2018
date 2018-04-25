@@ -10,4 +10,6 @@ function OrdernaLetras (palavra) {
      return final.join("");     // Junto todos os elementos do array e com "" se a palavra tiver espaco ela irá junta-las
 } 
 
-console.log(OrdernaLetras("vitor henrique antonio da silva")); 
+//console.log(OrdernaLetras("vitor henrique antonio da silva")); 
+
+module.exports.OrdernaLetras = OrdernaLetras;
