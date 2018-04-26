@@ -3,7 +3,7 @@
 // em diretório específico (test), enquanto o
 // código testado está isolado em outro diretório.
 
-const operacao = require("../App de Ordenacao de Letras");
+const operacao = require("../App");
 
 // Abaixo segue o nosso primeiro teste
 // identificado por "soma trivial".
@@ -11,8 +11,8 @@ const operacao = require("../App de Ordenacao de Letras");
 QUnit.test("Ordenacao Normal", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.OrdenaLetras('vitor');
+  let resultado = operacao.OrdenaLetras("vitor");
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado,'iortv' , "Ordenacao Errada");
+  assert.equal(resultado,"iortv" ,"Ordenacao Errada");
 });

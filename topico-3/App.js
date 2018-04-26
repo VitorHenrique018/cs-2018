@@ -1,4 +1,4 @@
-function OrdernaLetras (palavra) { 
+function OrdenaLetras (palavra) { 
   
     while(palavra.indexOf(" ") != -1)  // usei esse comando para tirar o espaço em branco
     palavra = palavra.replace(" ", "");
@@ -10,6 +10,6 @@ function OrdernaLetras (palavra) {
      return final.join("");     // Junto todos os elementos do array e com "" se a palavra tiver espaco ela irá junta-las
 } 
 
-//console.log(OrdernaLetras("vitor henrique antonio da silva")); 
+//console.log(OrdenaLetras("vitor henrique antonio da silva")); 
 
-module.exports.OrdernaLetras = OrdernaLetras;
+exports.OrdenaLetras = OrdenaLetras;
