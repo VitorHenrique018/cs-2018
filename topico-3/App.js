@@ -1,15 +1,24 @@
-function OrdenaLetras (palavra) {  /*palavra é uma String*/
+
+/**
+ * Documentaçao de Ordenar letras em ordem alfabética
+ * @param {string} - Parametro obrigatorio
+
+ * @returns {string} - O conteúdo a ser exibido
+ * @example 
+    exemplo('vitor'); // 'iortv'
+*/
+function OrdenaLetras (palavra) { 
   
-    while(palavra.indexOf(" ") != -1)  /*/ usei esse comando para tirar o espaço em branco*/
+    while(palavra.indexOf(" ") != -1) 
     palavra = palavra.replace(" ", "");
 
-    var string = palavra.split(""); /* aqui eu separo letra por letra, divide o objeto string em um array com substrings*/
+    var string = palavra.split("");
 
-     var final = string.sort();   /*aqui eu ordenei a string em ordem alfabetica ou seja ordena os elementos do array*/
+     var final = string.sort();   
 
-     return final.join("");     /* Junto todos os elementos do array e com "" se a palavra tiver espaco ela irá junta-las*/
+     return final.join("");     
 } 
 
-//console.log(OrdenaLetras("vitor henrique antonio da silva"));/*Resposta */ 
+//console.log(OrdenaLetras("vitor henrique antonio da silva"));
 
 exports.OrdenaLetras = OrdenaLetras;
