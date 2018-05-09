@@ -1,0 +1,24 @@
+{
+  "name": "topico-3",
+  "version": "1.0.0",
+  "description": "Projeto",
+  "main": " ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorHenrique018/cs-2018.git"
+  },
+  "keywords": [
+    "nani"
+  ],
+  "author": "Vitor",
+  "license": "ISC",
+  "dependencies": {
+    "qunit": "^2.6.0"
+  }
+}
