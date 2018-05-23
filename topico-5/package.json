@@ -17,5 +17,8 @@
     "nop"
   ],
   "author": "Vitor Henrique",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  }
 }

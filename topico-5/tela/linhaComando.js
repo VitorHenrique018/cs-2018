@@ -1,5 +1,7 @@
 const readline = require('readline');
 
+//const Semana = require('..diaSemana');
+
 const rl = readline.createInterface({
 
 
