@@ -6,7 +6,7 @@
  */
 export class Resto{
 
-	 /**
+/**
      * Produz o resultado com os argumentos fornecidos.
      *
      * @param {number} x 1° argumento: É o dividendo da divisao.
@@ -17,22 +17,22 @@ export class Resto{
 	 * @example 
        (5,3); // 2.
 
-     */
- 				Mod(x,y){
+*/
+	Mod(x,y){
 
 
-				if(y < 0 && x < 0){
-				return false;
-				}
+		if(y < 0 && x < 0){
+			return false
+		}
 
-				var s = x;
+		var s = x
 
-				while(y <= s){
+		while(y <= s){
 
-				s = s-y;
-				}
+			s = s-y
+		}
 
-				return s;
+		return s
+	}
 }
-}
-module.exports = Resto;
+module.exports = Resto

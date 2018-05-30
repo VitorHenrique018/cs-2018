@@ -2,7 +2,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -16,42 +16,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * 
  */
 var Resto = exports.Resto = function () {
-    function Resto() {
-        _classCallCheck(this, Resto);
+  function Resto() {
+    _classCallCheck(this, Resto);
+  }
+
+  _createClass(Resto, [{
+    key: "Mod",
+
+
+    /**
+         * Produz o resultado com os argumentos fornecidos.
+         *
+         * @param {number} x 1° argumento: É o dividendo da divisao.
+         * @param {number} y 2° argumento: É o divisor da divisao.
+    
+         *
+         * @returns {number} s O resto da divisão do dividendo pelo divisor.
+    	 * @example 
+           (5,3); // 2.
+    
+    */
+    value: function Mod(x, y) {
+
+      if (y < 0 && x < 0) {
+        return false;
+      }
+
+      var s = x;
+
+      while (y <= s) {
+
+        s = s - y;
+      }
+
+      return s;
     }
+  }]);
 
-    _createClass(Resto, [{
-        key: "Mod",
-
-
-        /**
-           * Produz o resultado com os argumentos fornecidos.
-           *
-           * @param {number} x 1° argumento: É o dividendo da divisao.
-           * @param {number} y 2° argumento: É o divisor da divisao.
-             *
-           * @returns {number} s O resto da divisão do dividendo pelo divisor.
-        * @example 
-             (5,3); // 2.
-             */
-        value: function Mod(x, y) {
-
-            if (y < 0 && x < 0) {
-                return false;
-            }
-
-            var s = x;
-
-            while (y <= s) {
-
-                s = s - y;
-            }
-
-            return s;
-        }
-    }]);
-
-    return Resto;
+  return Resto;
 }();
 
 module.exports = Resto;
@@ -67,13 +69,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var valor = new _Resto_divisao2.default();
 
-QUnit.test('Divisao Qualquer', function (assert) {
+QUnit.test('Divisao 3 Por 8', function (assert) {
 
-  // Executa a operação que desejamos testar
-  var resultado = valor.Mod(3, 8);
+	// Executa a operação que desejamos testar
+	var resultado = valor.Mod(3, 8);
 
-  // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 3, 'Resposta Incorreta');
+	// Verifica se o resultado produzido é o esperado.
+	assert.equal(resultado, 3, 'Resposta Correta');
+});
+
+QUnit.test('Divisao 15 Por 3', function (assert) {
+
+	// Executa a operação que desejamos testar
+	var resultado2 = valor.Mod(15, 3);
+
+	// Verifica se o resultado produzido é o esperado.
+	assert.equal(resultado2, 0, 'Resposta Correta');
+});
+
+QUnit.test('Divisao 4 Por 3', function (assert) {
+
+	// Executa a operação que desejamos testar
+	var resultado3 = valor.Mod(4, 3);
+
+	// Verifica se o resultado produzido é o esperado.
+	assert.equal(resultado3, 1, 'Resposta Correta');
 });
 
 },{"../Resto_divisao":1}]},{},[2]);

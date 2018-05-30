@@ -17,5 +17,9 @@
     "nop"
   ],
   "author": "Vitor Henrique",
-  "license": "ISC"
+  "license": "ISC",
+
+  "devDependencies": {
+    "eslint-config-google": "v4.19.1"
+}
 }
