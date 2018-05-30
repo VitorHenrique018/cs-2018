@@ -1,0 +1,21 @@
+{
+  "name": "topico-6",
+  "version": "1.0.1",
+  "description": "Descobrir o Resto da Divisao",
+  "main": "Resto_divisao.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "github.com/vitorhenrique018github.com/vitorhenrique018"
+  },
+  "keywords": [
+    "nop"
+  ],
+  "author": "Vitor Henrique",
+  "license": "ISC"
+}
