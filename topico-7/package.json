@@ -1,0 +1,25 @@
+{
+  "name": "topico-7",
+  "version": "1.0.1",
+  "description": "Soma dos numeros anteriores ate 1",
+  "main": "Soma_naturais.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/vitorhenrique018github.com/vitorhenrique018"
+  },
+  "keywords": [
+    "nop"
+  ],
+  "author": "Vitor Henrique",
+  "license": "ISC",
+  
+  "devDependencies": {
+    "eslint-config-google": "v4.19.1"
+}
+}
