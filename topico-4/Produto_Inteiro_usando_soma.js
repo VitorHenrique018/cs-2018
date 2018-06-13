@@ -6,7 +6,7 @@ if(a < 0 && b < 0){
 var totalParcelas = a;
 var parcela = b;
 
-if(b< a){
+if(b < a){
 	totalParcelas = b;
 	parcela = a
 }

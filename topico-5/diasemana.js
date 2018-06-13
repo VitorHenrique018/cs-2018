@@ -44,5 +44,4 @@ operacao(d,m,a){
 	return s % 7;
 	}
 }
-//console.log(operacao(9,5,2018));
-module.exports = diaSemana;
+console.log(operacao(9,5,2018));

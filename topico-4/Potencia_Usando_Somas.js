@@ -15,4 +15,4 @@ function Potencia(x,y){
 
 
 }
-console.log(Potencia(5,3));
+console.log(Potencia(4,4));

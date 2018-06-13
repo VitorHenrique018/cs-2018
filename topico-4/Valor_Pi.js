@@ -20,4 +20,4 @@ function Pi(n){
 	return p;
 }
 
-console.log(Pi(4));
+console.log(Pi(3));
