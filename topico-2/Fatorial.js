@@ -1,5 +1,5 @@
 function fatorial(n) {
-   let produto = 2;
+   var produto = 2;
    if (n < 2) {
      return 1;
     }
