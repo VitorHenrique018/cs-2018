@@ -1,19 +1,16 @@
 {
   "name": "topico-8",
-  "version": "1.0.0",
-  "description": "Biblioteca com varios algoritmos",
+  "version": "1.0.1",
+  "description": "Trabalho extra",
   "main": "biblioteca.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "\u001b[A\u001b[B\u001b[B\u001b[A"
-  },
-  "author": "Vitor Henrique",
+  "author": "vitor",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.12.0"
-  }
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1"
+  },
+  "dependencies": {}
 }
