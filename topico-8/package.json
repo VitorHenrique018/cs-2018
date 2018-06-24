@@ -1,6 +1,6 @@
 {
   "name": "topico-8",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Trabalho extra",
   "main": "biblioteca.js",
   "scripts": {
@@ -12,5 +12,12 @@
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VitorHenrique018/cs-2018/tree/master/topico-8"
+  }
 }
