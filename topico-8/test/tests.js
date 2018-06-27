@@ -434,9 +434,9 @@ var Biblioteca = exports.Biblioteca = function () {
 		key: "CPF2",
 		value: function CPF2(d) {
 
-			if (d.length != 11) ;
-			return false;
-
+			if (d.length != 11) {
+				return false;
+			}
 			var c = 8;
 			var p = parseInt(d[9]);
 			var s = parseInt(d[9]);
