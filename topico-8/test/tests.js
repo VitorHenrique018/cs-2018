@@ -393,14 +393,15 @@ var Biblioteca = exports.Biblioteca = function () {
 			return a;
 		}
 		/**
-     * Produz o resultado com os argumentos fornecidos.
-     *
-     * @param {number} a 1° Argumento: É um numero inteiro maior ou igual a b.
-     * @param {number} b 2° Argumento: É um numero inteiro maior 0.
-       * @returns {number} Retorna o Maior divisor comun de a e b Utilizando Subtracoes.
-     * 
-  * @example 
-       (81,54); // 27
+      * Produz o resultado com os argumentos fornecidos.
+      *
+      * @param {number} a 1° Argumento: É um numero inteiro maior ou igual a b.
+      * @param {number} b 2° Argumento: É um numero inteiro maior 0.
+  
+      * @returns {number} Retorna o Maior divisor comun de a e b Utilizando Subtracoes.
+      * 
+   * @example 
+        (81,54); // 27
   */
 
 	}, {
@@ -417,6 +418,39 @@ var Biblioteca = exports.Biblioteca = function () {
 				} else b = b - a;
 			}
 			return a;
+		}
+		/**
+      * Produz o resultado com os argumentos fornecidos.
+      *
+      * @param {number} d Unico Argumento: É um numero inteiro que possui 11 caracteres
+  
+      * @returns {number} Retorna True ou False de acordo com o numero informado.
+      * 
+   * @example 
+        (42154836124); // false
+  */
+
+	}, {
+		key: "CPF2",
+		value: function CPF2(d) {
+
+			if (d.length != 11) ;
+			return false;
+
+			var c = 8;
+			var p = parseInt(d[9]);
+			var s = parseInt(d[9]);
+
+			while (1 <= c) {
+				p = p + d[c];
+				s = s + p;
+				c = c - 1;
+			}
+
+			var j = Mod(Mod(s, 11), 10);
+			var k = Mod(Mod(9 * parseInt(d[10]) + (s - p), 11), 10);
+
+			return j == parseInt(d[10]) && k == parseInt(d[11]);
 		}
 	}]);
 
@@ -542,6 +576,15 @@ QUnit.test('MDC2 = 81 e 54', function (assert) {
 
 	// Verifica se o resultado produzido é o esperado.
 	assert.equal(resultado12, 27, 'Resposta Correta');
+});
+
+QUnit.test('CPF2 = 42154836124', function (assert) {
+
+	// Executa a operação que desejamos testar
+	var resultado13 = valor.CPF2(42154836124);
+
+	// Verifica se o resultado produzido é o esperado.
+	assert.equal(resultado13, false, 'Resposta Correta');
 });
 
 },{"../biblioteca":1}]},{},[2]);

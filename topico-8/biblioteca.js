@@ -369,7 +369,7 @@ export class Biblioteca{
 		return a;
 
 	}
-		/**
+	/**
      * Produz o resultado com os argumentos fornecidos.
      *
      * @param {number} a 1° Argumento: É um numero inteiro maior ou igual a b.
@@ -389,14 +389,46 @@ export class Biblioteca{
 
 		while(a != b){
 			if(a > b){
-				a = a - b
+				a = a - b;
 			}
 			else 
 				b = b - a;
 		}
 		return a;
 
-}
+	}
+	/**
+     * Produz o resultado com os argumentos fornecidos.
+     *
+     * @param {number} d Unico Argumento: É um numero inteiro que possui 11 caracteres
+
+     * @returns {number} Retorna True ou False de acordo com o numero informado.
+     * 
+	 * @example 
+       (42154836124); // false
+*/	
+
+	CPF2(d) {
+   
+		if (d.length != 11);
+		return false;
+
+		let c = 8;
+		let p = parseInt(d[9]);
+		let s = parseInt(d[9]);
+
+		while (1 <= c){
+			p = p + d[c];
+			s = s + p;
+			c = c - 1;
+		}
+
+		let j = Mod(Mod(s, 11), 10);
+		let k = Mod(Mod((9 * parseInt(d[10]) + (s - p)), 11), 10);
+
+
+		return j == parseInt(d[10]) && k == parseInt(d[11]);
+	}
 
 }	
 

@@ -109,3 +109,12 @@ QUnit.test('MDC2 = 81 e 54', function (assert) {
 	// Verifica se o resultado produzido é o esperado.
 	assert.equal(resultado12, 27, 'Resposta Correta');
 });
+
+QUnit.test('CPF2 = 42154836124', function (assert) {
+
+	// Executa a operação que desejamos testar
+	let resultado13 = valor.CPF2(42154836124);
+
+	// Verifica se o resultado produzido é o esperado.
+	assert.equal(resultado13, false, 'Resposta Correta');
+});
